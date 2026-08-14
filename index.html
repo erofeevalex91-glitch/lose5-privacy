@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOSE5 — Privacy Policy / Политика конфиденциальности</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12211B;
+    --ink-soft:#4A5A53;
+    --paper:#FBFAF7;
+    --line:#E3E0D8;
+    --green:#177A55;
+    --green-soft:#E8F2ED;
+    --radius:14px;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 96px}
+
+  header{
+    padding:40px 0 28px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:baseline;gap:10px}
+  .brand-name{
+    font-size:22px;font-weight:700;letter-spacing:-.02em;
+  }
+  .brand-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--ink-soft);
+    text-transform:uppercase;letter-spacing:.08em;
+  }
+
+  .langs{display:flex;gap:6px}
+  .langs button{
+    font:inherit;font-size:13px;font-weight:600;
+    padding:7px 15px;border-radius:999px;
+    border:1px solid var(--line);
+    background:transparent;color:var(--ink-soft);
+    cursor:pointer;transition:.15s;
+  }
+  .langs button:hover{border-color:var(--ink-soft)}
+  .langs button[aria-pressed="true"]{
+    background:var(--ink);border-color:var(--ink);color:#fff;
+  }
+  .langs button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+  h1{
+    font-size:clamp(30px,6vw,42px);
+    line-height:1.15;letter-spacing:-.025em;
+    font-weight:700;margin:8px 0 10px;
+  }
+  .updated{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;color:var(--ink-soft);
+    letter-spacing:.03em;margin-bottom:38px;
+  }
+
+  h2{
+    font-size:15px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.07em;
+    margin:44px 0 14px;padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  h3{font-size:17px;font-weight:600;margin:26px 0 8px}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px;padding-left:22px}
+  li{margin-bottom:7px}
+  a{color:var(--green);text-underline-offset:3px}
+  strong{font-weight:600}
+
+  .lead{font-size:19px;line-height:1.6;color:var(--ink)}
+
+  .table{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;margin:20px 0 24px;
+    background:#fff;
+  }
+  .row{
+    display:grid;
+    grid-template-columns:1.15fr 1fr .9fr;
+    gap:0;
+    border-bottom:1px solid var(--line);
+  }
+  .row:last-child{border-bottom:none}
+  .row.head{
+    background:#F4F2EC;
+    font-size:11.5px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;
+    color:var(--ink-soft);
+  }
+  .cell{padding:13px 15px;font-size:14.5px;line-height:1.5}
+  .cell + .cell{border-left:1px solid var(--line)}
+  @media(max-width:620px){
+    .row{grid-template-columns:1fr}
+    .row.head{display:none}
+    .row{border-bottom:2px solid var(--line);padding:4px 0}
+    .cell + .cell{border-left:none;padding-top:0}
+    .cell::before{
+      content:attr(data-label);
+      display:block;
+      font-size:10.5px;font-weight:700;
+      text-transform:uppercase;letter-spacing:.06em;
+      color:var(--ink-soft);margin-bottom:3px;
+    }
+  }
+
+  .note{
+    background:var(--green-soft);
+    border-left:3px solid var(--green);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:16px 18px;margin:22px 0;
+    font-size:15.5px;
+  }
+  .note strong{color:var(--green)}
+  .note p:last-child{margin-bottom:0}
+
+
+  .contact{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;margin-top:22px;
+    background:#fff;
+  }
+  .contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}
+  .contact dt{color:var(--ink-soft);white-space:nowrap}
+  .contact dd{margin:0}
+
+  footer{
+    margin-top:56px;padding-top:22px;
+    border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--ink-soft);
+  }
+
+  [data-lang]{display:none}
+  [data-lang].on{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <span class="brand-name">LOSE5</span>
+    <span class="brand-tag" data-lang="ru">Конфиденциальность</span>
+    <span class="brand-tag" data-lang="en">Privacy</span>
+  </div>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-set="ru" aria-pressed="true">Русский</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<!-- ============ RU ============ -->
+<main data-lang="ru" class="on">
+
+<h1>Политика конфиденциальности</h1>
+<div class="updated">Обновлено 14 августа 2026</div>
+
+<p class="lead">LOSE5 — приложение для снижения веса. Чтобы оно работало, вы вводите данные о себе: вес, питание, активность. Ниже описано, что мы с этими данными делаем, кому передаём и как их удалить.</p>
+
+
+<h2>Кто обрабатывает данные</h2>
+<p>Данные обрабатывает Александр Ерофеев, физическое лицо, Республика Казахстан, город Талдыкорган. Контакт указан в конце страницы.</p>
+
+<h2>Какие данные мы собираем</h2>
+
+<div class="table">
+  <div class="row head">
+    <div class="cell">Данные</div>
+    <div class="cell">Зачем</div>
+    <div class="cell">Куда попадают</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Email и идентификатор аккаунта</div>
+    <div class="cell" data-label="Зачем">Вход, синхронизация между устройствами</div>
+    <div class="cell" data-label="Куда">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Вес, рост, возраст, пол, цель</div>
+    <div class="cell" data-label="Зачем">Расчёт нормы калорий, отслеживание прогресса</div>
+    <div class="cell" data-label="Куда">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Питание, шаги, вода, сон, тренировки</div>
+    <div class="cell" data-label="Зачем">Оценка дня, графики, серия дней</div>
+    <div class="cell" data-label="Куда">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Дневные итоги из Apple Health / Health Connect</div>
+    <div class="cell" data-label="Зачем">Автозаполнение шагов, сна, тренировок, веса</div>
+    <div class="cell" data-label="Куда">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Фотографии еды</div>
+    <div class="cell" data-label="Зачем">Распознавание блюда и подсчёт калорий</div>
+    <div class="cell" data-label="Куда">Anthropic, не сохраняется</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Статус подписки</div>
+    <div class="cell" data-label="Зачем">Доступ к платным функциям</div>
+    <div class="cell" data-label="Куда">RevenueCat</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">События использования приложения</div>
+    <div class="cell" data-label="Зачем">Понять, какие функции нужны, найти ошибки</div>
+    <div class="cell" data-label="Куда">Supabase</div>
+  </div>
+</div>
+
+<p>Мы не собираем ваши контакты, местоположение, историю браузера и не читаем содержимое других приложений.</p>
+
+<h2>Данные о здоровье с устройства</h2>
+
+<div class="note">
+  <p><strong>Мы читаем только дневные итоги:</strong> шаги, вес, минуты тренировки, сон и активные калории за день. Подробные записи — пульс, маршруты, отдельные тренировочные сессии, фазы сна — не читаются.</p>
+</div>
+
+<p>Эти дневные значения попадают в ту же запись дня, что и введённые вручную, и сохраняются в вашем аккаунте. Это нужно, чтобы работали графики, недельный отчёт и синхронизация между устройствами.</p>
+
+<p>Обратно в Apple Health или Health Connect мы ничего не записываем — доступ запрашивается только на чтение.</p>
+
+<p>Разрешение запрашивается отдельно, и вы можете его не давать — приложение продолжит работать, просто шаги и тренировки нужно будет вводить вручную. Отозвать доступ можно в любой момент в настройках устройства.</p>
+
+<p>Данные о здоровье не используются для рекламы, не продаются и не передаются третьим лицам. В iCloud они не сохраняются.</p>
+
+<h2>Аналитика</h2>
+<p>Мы записываем, какими функциями вы пользуетесь: открыли приложение, прошли онбординг, посмотрели экран подписки. Это нужно, чтобы понимать, где приложение неудобно.</p>
+<p>В аналитику никогда не попадают ваш вес, калории, записи о питании, фотографии и email. Технически это невозможно: список допустимых полей задан в коде, всё остальное отбрасывается перед отправкой.</p>
+<p>Аналитика хранится в нашей базе Supabase. Мы не используем Google Analytics, Facebook SDK и другие рекламные трекеры.</p>
+
+<h2>Кому мы передаём данные</h2>
+<ul>
+  <li><strong>Supabase</strong> — хранение вашего аккаунта и записей. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Политика Supabase</a></li>
+  <li><strong>Anthropic</strong> — обработка запросов к ИИ-коучу и распознавание фото еды. <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Политика Anthropic</a></li>
+  <li><strong>RevenueCat</strong> — управление подписками. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Политика RevenueCat</a></li>
+  <li><strong>Apple и Google</strong> — обработка платежей за подписку. Мы не получаем данные вашей карты.</li>
+</ul>
+<p>Мы не продаём ваши данные и не передаём их рекламодателям.</p>
+
+<h2>Хранение и защита</h2>
+<p>Данные хранятся на серверах Supabase в Европейском союзе. Передача идёт по HTTPS. Доступ к вашим записям ограничен на уровне базы данных — другие пользователи их не видят.</p>
+
+<h2>Удаление аккаунта</h2>
+<p>Удалить аккаунт можно прямо в приложении: <strong>Профиль → Удалить аккаунт</strong>. Ваши записи о весе, питании и активности удаляются безвозвратно.</p>
+<p>Обезличенные события аналитики сохраняются — в них нет ничего, что связывало бы их с вами.</p>
+
+<h2>Дети</h2>
+<p>Приложение предназначено для людей от 18 лет. Мы сознательно не собираем данные детей. Если вы считаете, что ребёнок передал нам свои данные, напишите нам — мы удалим их.</p>
+
+<h2>Ваши права</h2>
+<p>Вы можете запросить копию своих данных, исправить их, удалить аккаунт или отозвать согласие на обработку. Для этого напишите на адрес ниже.</p>
+<p>Если вы находитесь в Европейском союзе, вам дополнительно доступны права по GDPR, включая право на переносимость данных и право подать жалобу в надзорный орган.</p>
+
+<h2>Изменения</h2>
+<p>Если политика изменится, мы обновим дату вверху страницы. Существенные изменения покажем в приложении.</p>
+
+<h2>Как связаться</h2>
+<div class="contact">
+  <dl>
+    <dt>Email</dt><dd><a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a></dd>
+    <dt>Приложение</dt><dd>LOSE5</dd>
+    <dt>Страна</dt><dd>Республика Казахстан</dd>
+  </dl>
+</div>
+
+</main>
+
+<!-- ============ EN ============ -->
+<main data-lang="en">
+
+<h1>Privacy Policy</h1>
+<div class="updated">Updated 14 August 2026</div>
+
+<p class="lead">LOSE5 is a weight-loss app. For it to work, you enter data about yourself: weight, meals, activity. Below is what we do with that data, who we share it with, and how to delete it.</p>
+
+
+<h2>Who handles your data</h2>
+<p>Your data is handled by Aleksandr Erofeev, an individual based in Taldykorgan, Republic of Kazakhstan. Contact details are at the end of this page.</p>
+
+<h2>What we collect</h2>
+
+<div class="table">
+  <div class="row head">
+    <div class="cell">Data</div>
+    <div class="cell">Why</div>
+    <div class="cell">Where it goes</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Email and account ID</div>
+    <div class="cell" data-label="Why">Sign-in, syncing across devices</div>
+    <div class="cell" data-label="Where">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Weight, height, age, sex, goal</div>
+    <div class="cell" data-label="Why">Calorie targets, progress tracking</div>
+    <div class="cell" data-label="Where">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Meals, steps, water, sleep, workouts</div>
+    <div class="cell" data-label="Why">Daily score, charts, streak</div>
+    <div class="cell" data-label="Where">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Daily totals from Apple Health / Health Connect</div>
+    <div class="cell" data-label="Why">Auto-filling steps, sleep, workouts, weight</div>
+    <div class="cell" data-label="Where">Supabase</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Food photos</div>
+    <div class="cell" data-label="Why">Recognising the dish and estimating calories</div>
+    <div class="cell" data-label="Where">Anthropic, not stored</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Subscription status</div>
+    <div class="cell" data-label="Why">Access to paid features</div>
+    <div class="cell" data-label="Where">RevenueCat</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">App usage events</div>
+    <div class="cell" data-label="Why">Understanding which features matter, finding bugs</div>
+    <div class="cell" data-label="Where">Supabase</div>
+  </div>
+</div>
+
+<p>We do not collect your contacts, location, or browsing history, and we do not read the contents of other apps.</p>
+
+<h2>Health data from your device</h2>
+
+<div class="note">
+  <p><strong>We read daily totals only:</strong> steps, weight, workout minutes, sleep and active energy for the day. Detailed records — heart rate, routes, individual workout sessions, sleep stages — are not read.</p>
+</div>
+
+<p>These daily values go into the same daily entry as anything you type in yourself, and are saved to your account. This is what makes charts, the weekly report and cross-device sync work.</p>
+
+<p>We never write anything back to Apple Health or Health Connect — access is requested for reading only.</p>
+
+<p>Permission is requested separately and you can decline it — the app keeps working, you will just enter steps and workouts manually. You can revoke access at any time in your device settings.</p>
+
+<p>Health data is never used for advertising, sold, or shared with third parties. It is not stored in iCloud.</p>
+
+<h2>Analytics</h2>
+<p>We record which features you use: opening the app, finishing onboarding, viewing the subscription screen. This tells us where the app is confusing.</p>
+<p>Analytics never include your weight, calories, meal entries, photos, or email. This is enforced in code: an allow-list defines which fields may be sent, and everything else is dropped before the event leaves your device.</p>
+<p>Analytics are stored in our own Supabase database. We do not use Google Analytics, the Facebook SDK, or any advertising trackers.</p>
+
+<h2>Who we share data with</h2>
+<ul>
+  <li><strong>Supabase</strong> — stores your account and entries. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase privacy policy</a></li>
+  <li><strong>Anthropic</strong> — processes AI coach requests and food photo recognition. <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic privacy policy</a></li>
+  <li><strong>RevenueCat</strong> — manages subscriptions. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat privacy policy</a></li>
+  <li><strong>Apple and Google</strong> — process subscription payments. We never receive your card details.</li>
+</ul>
+<p>We do not sell your data and do not share it with advertisers.</p>
+
+<h2>Storage and security</h2>
+<p>Data is stored on Supabase servers in the European Union and transmitted over HTTPS. Access to your entries is restricted at the database level, so other users cannot see them.</p>
+
+<h2>Deleting your account</h2>
+<p>You can delete your account inside the app: <strong>Profile → Delete account</strong>. Your weight, meal, and activity records are permanently removed.</p>
+<p>Anonymised analytics events are kept — they contain nothing that links them back to you.</p>
+
+<h2>Children</h2>
+<p>This app is intended for people aged 18 and over. We do not knowingly collect data from children. If you believe a child has given us their data, contact us and we will delete it.</p>
+
+<h2>Your rights</h2>
+<p>You can request a copy of your data, correct it, delete your account, or withdraw consent. Email us at the address below.</p>
+<p>If you are in the European Union, you also have rights under the GDPR, including data portability and the right to lodge a complaint with a supervisory authority.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we will update the date at the top of the page. Significant changes will be shown in the app.</p>
+
+<h2>Contact</h2>
+<div class="contact">
+  <dl>
+    <dt>Email</dt><dd><a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a></dd>
+    <dt>App</dt><dd>LOSE5</dd>
+    <dt>Country</dt><dd>Republic of Kazakhstan</dd>
+  </dl>
+</div>
+
+</main>
+
+<footer>
+  <span data-lang="ru" class="on">LOSE5 · Сбрось 5 кг. По одному дню за раз.</span>
+  <span data-lang="en">LOSE5 · Lose 5 kg. One day at a time.</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.langs button');
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.classList.toggle('on', el.getAttribute('data-lang') === lang);
+    });
+    buttons.forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set === lang));
+    });
+    try { localStorage.setItem('lose5-privacy-lang', lang); } catch(e){}
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.set); });
+  });
+  var saved;
+  try { saved = localStorage.getItem('lose5-privacy-lang'); } catch(e){}
+  var initial = saved || (navigator.language && navigator.language.slice(0,2) === 'ru' ? 'ru' : 'en');
+  setLang(initial);
+})();
+</script>
+
+</body>
+</html>
