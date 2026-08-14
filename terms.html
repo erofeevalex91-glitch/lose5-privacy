@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOSE5 — Terms of Use / Условия использования</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12211B;
+    --ink-soft:#4A5A53;
+    --paper:#FBFAF7;
+    --line:#E3E0D8;
+    --green:#177A55;
+    --green-soft:#E8F2ED;
+    --red:#9B2C1F;
+    --red-soft:#FBEDEA;
+    --radius:14px;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 96px}
+
+  header{
+    padding:40px 0 28px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:baseline;gap:10px}
+  .brand-name{font-size:22px;font-weight:700;letter-spacing:-.02em}
+  .brand-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--ink-soft);
+    text-transform:uppercase;letter-spacing:.08em;
+  }
+
+  .langs{display:flex;gap:6px}
+  .langs button{
+    font:inherit;font-size:13px;font-weight:600;
+    padding:7px 15px;border-radius:999px;
+    border:1px solid var(--line);
+    background:transparent;color:var(--ink-soft);
+    cursor:pointer;transition:.15s;
+  }
+  .langs button:hover{border-color:var(--ink-soft)}
+  .langs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .langs button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+  h1{
+    font-size:clamp(30px,6vw,42px);
+    line-height:1.15;letter-spacing:-.025em;
+    font-weight:700;margin:8px 0 10px;
+  }
+  .updated{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;color:var(--ink-soft);
+    letter-spacing:.03em;margin-bottom:38px;
+  }
+
+  h2{
+    font-size:15px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.07em;
+    margin:44px 0 14px;padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px;padding-left:22px}
+  li{margin-bottom:7px}
+  a{color:var(--green);text-underline-offset:3px}
+  strong{font-weight:600}
+
+  .lead{font-size:19px;line-height:1.6}
+
+  .alert{
+    background:var(--red-soft);
+    border-left:3px solid var(--red);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:18px 20px;margin:24px 0;
+    font-size:16px;
+  }
+  .alert strong{color:var(--red)}
+  .alert p:last-child{margin-bottom:0}
+
+  .note{
+    background:var(--green-soft);
+    border-left:3px solid var(--green);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:16px 18px;margin:22px 0;
+    font-size:15.5px;
+  }
+  .note p:last-child{margin-bottom:0}
+
+  .contact{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;margin-top:22px;
+    background:#fff;
+  }
+  .contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}
+  .contact dt{color:var(--ink-soft);white-space:nowrap}
+  .contact dd{margin:0}
+
+  footer{
+    margin-top:56px;padding-top:22px;
+    border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--ink-soft);
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+
+  [data-lang]{display:none}
+  [data-lang].on{display:block}
+  footer [data-lang].on{display:inline}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <span class="brand-name">LOSE5</span>
+    <span class="brand-tag" data-lang="ru">Условия</span>
+    <span class="brand-tag" data-lang="en">Terms</span>
+  </div>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-set="ru" aria-pressed="true">Русский</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<!-- ============ RU ============ -->
+<main data-lang="ru" class="on">
+
+<h1>Условия использования</h1>
+<div class="updated">Обновлено 14 августа 2026</div>
+
+<p class="lead">Устанавливая и используя LOSE5, вы соглашаетесь с этими условиями. Если вы с чем-то не согласны — не пользуйтесь приложением.</p>
+
+<div class="alert">
+  <p><strong>LOSE5 — не медицинский сервис.</strong> Приложение помогает отслеживать привычки и вес, но не ставит диагнозов, не назначает лечение и не заменяет врача.</p>
+  <p>Перед изменением питания или началом тренировок проконсультируйтесь с врачом — особенно если у вас есть хронические заболевания, вы беременны, кормите грудью, вам меньше 18 лет или вы принимаете лекарства.</p>
+</div>
+
+<h2>Кто предоставляет сервис</h2>
+<p>Приложение LOSE5 разработано и предоставляется Александром Ерофеевым, физическим лицом, Республика Казахстан, город Талдыкорган.</p>
+
+<h2>Возраст</h2>
+<p>Приложение предназначено для людей от 18 лет. Регистрируясь, вы подтверждаете, что вам исполнилось 18.</p>
+
+<h2>Что делает приложение</h2>
+<p>LOSE5 позволяет записывать вес, питание, шаги, воду, сон и тренировки, показывает прогресс и оценку дня, а в платной версии даёт советы от ИИ-коуча, распознаёт еду по фотографии и формирует недельные отчёты.</p>
+
+<h2>Расчёты и ИИ — это оценки</h2>
+<p>Норма калорий, оценка дня, прогнозы и любые числа в приложении рассчитываются по общим формулам и не учитывают ваши индивидуальные особенности.</p>
+<p>Распознавание еды по фотографии даёт <strong>приблизительную</strong> оценку калорий и состава. Ошибки неизбежны — всегда проверяйте результат перед сохранением.</p>
+<p>Советы ИИ-коуча формируются автоматически на основе введённых вами данных. Это не рекомендации специалиста. Решения о своём здоровье принимаете вы.</p>
+
+<h2>Ваши данные</h2>
+<p>Вы отвечаете за то, что вводите в приложение. Мы не проверяем достоверность введённых данных.</p>
+<p>Как мы обращаемся с вашими данными, описано в <a href="./">Политике конфиденциальности</a>.</p>
+
+<h2>Подписка LOSE5 PRO</h2>
+<p>Часть функций доступна по платной подписке. Оплата, продление и отмена происходят через App Store или Google Play — мы не обрабатываем платежи и не видим данные вашей карты.</p>
+<ul>
+  <li>Подписка продлевается автоматически, пока вы её не отмените</li>
+  <li>Отменить можно в настройках вашего аккаунта App Store или Google Play, не позднее чем за 24 часа до окончания текущего периода</li>
+  <li>Стоимость и срок указаны на экране подписки в приложении до оплаты</li>
+  <li>Если пробный период предусмотрен, неиспользованная его часть сгорает при покупке подписки</li>
+  <li>Возвраты регулируются правилами App Store и Google Play, а не нами</li>
+</ul>
+<p>Удаление приложения не отменяет подписку — её нужно отменить в магазине приложений.</p>
+
+<h2>Что делать нельзя</h2>
+<ul>
+  <li>Взламывать, декомпилировать или обходить защиту приложения</li>
+  <li>Использовать приложение для незаконных целей</li>
+  <li>Создавать автоматические запросы к нашим серверам или создавать чрезмерную нагрузку</li>
+  <li>Копировать и распространять содержимое приложения как своё</li>
+  <li>Передавать доступ к платной подписке другим людям</li>
+</ul>
+
+<h2>Права на приложение</h2>
+<p>Код, дизайн, тексты и название LOSE5 принадлежат разработчику. Использование приложения не передаёт вам прав на них.</p>
+<p>Данные, которые вы вводите, остаются вашими.</p>
+
+<h2>Доступность сервиса</h2>
+<p>Мы стараемся, чтобы приложение работало без сбоев, но не гарантируем непрерывную работу. Функции могут меняться, а отдельные из них — прекращать существование.</p>
+<p>Некоторые функции зависят от сторонних сервисов и требуют интернета.</p>
+
+<h2>Ответственность</h2>
+<p>Приложение предоставляется «как есть». В пределах, допустимых законом, мы не несём ответственности за последствия ваших решений о питании, тренировках и здоровье, за неточности в расчётах и оценках ИИ, а также за потерю данных.</p>
+<p>Если ответственность всё же наступит, она ограничена суммой, которую вы заплатили за подписку за последние 12 месяцев.</p>
+
+<h2>Прекращение доступа</h2>
+<p>Вы можете в любой момент удалить аккаунт в приложении: <strong>Профиль → Удалить аккаунт</strong>.</p>
+<p>Мы можем ограничить доступ, если вы нарушаете эти условия.</p>
+
+<h2>Изменения условий</h2>
+<p>Условия могут меняться. Дата вверху страницы показывает последнюю редакцию, о существенных изменениях мы сообщим в приложении. Продолжая пользоваться LOSE5 после изменений, вы принимаете новую редакцию.</p>
+
+<h2>Применимое право</h2>
+<p>К этим условиям применяется законодательство Республики Казахстан. Споры разрешаются по месту нахождения разработчика, если иное не предусмотрено законом вашей страны о защите прав потребителей.</p>
+
+<h2>Контакты</h2>
+<div class="contact">
+  <dl>
+    <dt>Email</dt><dd><a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a></dd>
+    <dt>Приложение</dt><dd>LOSE5</dd>
+    <dt>Страна</dt><dd>Республика Казахстан</dd>
+  </dl>
+</div>
+
+<div class="note">
+  <p>Для пользователей iOS дополнительно действуют <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">стандартные условия лицензии Apple</a>.</p>
+</div>
+
+</main>
+
+<!-- ============ EN ============ -->
+<main data-lang="en">
+
+<h1>Terms of Use</h1>
+<div class="updated">Updated 14 August 2026</div>
+
+<p class="lead">By installing and using LOSE5 you agree to these terms. If you disagree with any part of them, please do not use the app.</p>
+
+<div class="alert">
+  <p><strong>LOSE5 is not a medical service.</strong> The app helps you track habits and weight. It does not diagnose conditions, prescribe treatment, or replace a doctor.</p>
+  <p>Consult a physician before changing your diet or starting to exercise — particularly if you have a chronic condition, are pregnant or breastfeeding, are under 18, or take medication.</p>
+</div>
+
+<h2>Who provides the service</h2>
+<p>LOSE5 is developed and provided by Aleksandr Erofeev, an individual based in Taldykorgan, Republic of Kazakhstan.</p>
+
+<h2>Age</h2>
+<p>This app is intended for people aged 18 and over. By creating an account you confirm that you are at least 18.</p>
+
+<h2>What the app does</h2>
+<p>LOSE5 lets you log weight, meals, steps, water, sleep and workouts, shows your progress and a daily score, and — in the paid tier — provides AI coach suggestions, food recognition from photos, and weekly reports.</p>
+
+<h2>Calculations and AI are estimates</h2>
+<p>Calorie targets, the daily score, projections and every other number in the app are produced by general formulas and do not account for your individual circumstances.</p>
+<p>Food recognition from photos produces an <strong>approximate</strong> estimate of calories and macros. Errors are unavoidable — always review the result before saving.</p>
+<p>AI coach suggestions are generated automatically from the data you enter. They are not professional advice. Decisions about your health are yours.</p>
+
+<h2>Your data</h2>
+<p>You are responsible for what you enter. We do not verify the accuracy of your entries.</p>
+<p>How we handle your data is described in our <a href="./">Privacy Policy</a>.</p>
+
+<h2>LOSE5 PRO subscription</h2>
+<p>Some features require a paid subscription. Payment, renewal and cancellation are handled by the App Store or Google Play — we do not process payments and never see your card details.</p>
+<ul>
+  <li>The subscription renews automatically until you cancel it</li>
+  <li>Cancel in your App Store or Google Play account settings at least 24 hours before the current period ends</li>
+  <li>Price and duration are shown on the subscription screen in the app before purchase</li>
+  <li>Where a free trial is offered, any unused portion is forfeited when you buy a subscription</li>
+  <li>Refunds are governed by App Store and Google Play policies, not by us</li>
+</ul>
+<p>Deleting the app does not cancel your subscription — cancel it in the app store.</p>
+
+<h2>What you may not do</h2>
+<ul>
+  <li>Reverse-engineer, decompile, or circumvent protections in the app</li>
+  <li>Use the app for unlawful purposes</li>
+  <li>Send automated requests to our servers or place excessive load on them</li>
+  <li>Copy or redistribute the app's content as your own</li>
+  <li>Share paid subscription access with other people</li>
+</ul>
+
+<h2>Ownership</h2>
+<p>The code, design, texts and the LOSE5 name belong to the developer. Using the app does not transfer any rights in them to you.</p>
+<p>The data you enter remains yours.</p>
+
+<h2>Availability</h2>
+<p>We aim to keep the app running smoothly but do not guarantee uninterrupted service. Features may change, and individual features may be discontinued.</p>
+<p>Some features depend on third-party services and require an internet connection.</p>
+
+<h2>Liability</h2>
+<p>The app is provided "as is". To the extent permitted by law, we are not liable for the outcomes of your decisions about diet, exercise and health, for inaccuracies in calculations or AI estimates, or for data loss.</p>
+<p>Where liability does arise, it is limited to the amount you paid for a subscription in the preceding 12 months.</p>
+
+<h2>Ending access</h2>
+<p>You can delete your account at any time in the app: <strong>Profile → Delete account</strong>.</p>
+<p>We may restrict access if you breach these terms.</p>
+
+<h2>Changes to these terms</h2>
+<p>These terms may change. The date at the top shows the latest revision, and significant changes will be announced in the app. Continuing to use LOSE5 after a change means you accept the new version.</p>
+
+<h2>Governing law</h2>
+<p>These terms are governed by the laws of the Republic of Kazakhstan. Disputes are resolved at the developer's location, unless consumer protection law in your country provides otherwise.</p>
+
+<h2>Contact</h2>
+<div class="contact">
+  <dl>
+    <dt>Email</dt><dd><a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a></dd>
+    <dt>App</dt><dd>LOSE5</dd>
+    <dt>Country</dt><dd>Republic of Kazakhstan</dd>
+  </dl>
+</div>
+
+<div class="note">
+  <p>For iOS users, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Standard End User License Agreement</a> also applies.</p>
+</div>
+
+</main>
+
+<footer>
+  <span>
+    <span data-lang="ru" class="on">LOSE5 · Сбрось 5 кг. По одному дню за раз.</span>
+    <span data-lang="en">LOSE5 · Lose 5 kg. One day at a time.</span>
+  </span>
+  <span>
+    <a href="./"><span data-lang="ru" class="on">Политика конфиденциальности</span><span data-lang="en">Privacy Policy</span></a>
+  </span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.langs button');
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.classList.toggle('on', el.getAttribute('data-lang') === lang);
+    });
+    buttons.forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set === lang));
+    });
+    try { localStorage.setItem('lose5-privacy-lang', lang); } catch(e){}
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.set); });
+  });
+  var saved;
+  try { saved = localStorage.getItem('lose5-privacy-lang'); } catch(e){}
+  var initial = saved || (navigator.language && navigator.language.slice(0,2) === 'ru' ? 'ru' : 'en');
+  setLang(initial);
+})();
+</script>
+
+</body>
+</html>
