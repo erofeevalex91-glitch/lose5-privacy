@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOSE5 — Delete Account / Удаление аккаунта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12211B;
+    --ink-soft:#4A5A53;
+    --paper:#FBFAF7;
+    --line:#E3E0D8;
+    --green:#177A55;
+    --green-soft:#E8F2ED;
+    --red:#9B2C1F;
+    --red-soft:#FBEDEA;
+    --radius:14px;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 96px}
+
+  header{
+    padding:40px 0 28px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:baseline;gap:10px}
+  .brand-name{font-size:22px;font-weight:700;letter-spacing:-.02em}
+  .brand-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--ink-soft);
+    text-transform:uppercase;letter-spacing:.08em;
+  }
+
+  .langs{display:flex;gap:6px}
+  .langs button{
+    font:inherit;font-size:13px;font-weight:600;
+    padding:7px 15px;border-radius:999px;
+    border:1px solid var(--line);
+    background:transparent;color:var(--ink-soft);
+    cursor:pointer;transition:.15s;
+  }
+  .langs button:hover{border-color:var(--ink-soft)}
+  .langs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .langs button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+  h1{
+    font-size:clamp(30px,6vw,42px);
+    line-height:1.15;letter-spacing:-.025em;
+    font-weight:700;margin:8px 0 10px;
+  }
+  .updated{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;color:var(--ink-soft);
+    letter-spacing:.03em;margin-bottom:38px;
+  }
+
+  h2{
+    font-size:15px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.07em;
+    margin:44px 0 14px;padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 14px;padding-left:22px}
+  li{margin-bottom:7px}
+  a{color:var(--green);text-underline-offset:3px}
+  strong{font-weight:600}
+
+  .lead{font-size:19px;line-height:1.6}
+
+  .steps{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px 22px 22px 44px;
+    background:#fff;
+    margin:18px 0 24px;
+  }
+  .steps li{margin-bottom:12px}
+  .steps li:last-child{margin-bottom:0}
+  .steps strong{color:var(--green)}
+
+  .table{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;margin:18px 0 24px;
+    background:#fff;
+  }
+  .row{
+    display:grid;
+    grid-template-columns:1.1fr 1.4fr;
+    gap:0;
+    border-bottom:1px solid var(--line);
+  }
+  .row:last-child{border-bottom:none}
+  .row.head{
+    background:#F4F2EC;
+    font-size:11.5px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;
+    color:var(--ink-soft);
+  }
+  .cell{padding:13px 15px;font-size:14.5px;line-height:1.5}
+  .cell + .cell{border-left:1px solid var(--line)}
+  @media(max-width:620px){
+    .row{grid-template-columns:1fr}
+    .row.head{display:none}
+    .row{border-bottom:2px solid var(--line);padding:4px 0}
+    .cell + .cell{border-left:none;padding-top:0}
+    .cell::before{
+      content:attr(data-label);
+      display:block;
+      font-size:10.5px;font-weight:700;
+      text-transform:uppercase;letter-spacing:.06em;
+      color:var(--ink-soft);margin-bottom:3px;
+    }
+    .steps{padding:20px 20px 20px 40px}
+  }
+
+  .note{
+    background:var(--green-soft);
+    border-left:3px solid var(--green);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:16px 18px;margin:22px 0;
+    font-size:15.5px;
+  }
+  .note strong{color:var(--green)}
+  .note p:last-child{margin-bottom:0}
+
+  .alert{
+    background:var(--red-soft);
+    border-left:3px solid var(--red);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:18px 20px;margin:24px 0;
+    font-size:16px;
+  }
+  .alert strong{color:var(--red)}
+  .alert p:last-child{margin-bottom:0}
+
+  .contact{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;margin-top:22px;
+    background:#fff;
+  }
+  .contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}
+  .contact dt{color:var(--ink-soft);white-space:nowrap}
+  .contact dd{margin:0}
+
+  footer{
+    margin-top:56px;padding-top:22px;
+    border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--ink-soft);
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  footer .links{display:flex;gap:16px;flex-wrap:wrap}
+
+  [data-lang]{display:none}
+  [data-lang].on{display:block}
+  footer [data-lang].on{display:inline}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <span class="brand-name">LOSE5</span>
+    <span class="brand-tag" data-lang="ru">Удаление аккаунта</span>
+    <span class="brand-tag" data-lang="en">Delete Account</span>
+  </div>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-set="ru" aria-pressed="true">Русский</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<!-- ============ RU ============ -->
+<main data-lang="ru" class="on">
+
+<h1>Удаление аккаунта</h1>
+<div class="updated">Обновлено 17 августа 2026</div>
+
+<p class="lead">Приложение LOSE5 разработано и предоставляется физическим лицом в Республике Казахстан. Ниже — как удалить аккаунт LOSE5 и связанные с ним данные: прямо в приложении или по email, если доступа к приложению нет. Также указано, какие данные удаляются, а какие и почему сохраняются.</p>
+
+<h2>Способ 1 — в приложении</h2>
+<ol class="steps">
+  <li><strong>Шаг 1.</strong> Откройте приложение LOSE5 и войдите в свой аккаунт, если ещё не вошли.</li>
+  <li><strong>Шаг 2.</strong> Перейдите на вкладку «Профиль».</li>
+  <li><strong>Шаг 3.</strong> Прокрутите вниз и нажмите «Удалить аккаунт».</li>
+  <li><strong>Шаг 4.</strong> Подтвердите удаление во всплывающем окне.</li>
+</ol>
+<div class="note">
+  <p><strong>Удаление происходит сразу и необратимо.</strong> После подтверждения восстановить аккаунт и данные нельзя.</p>
+</div>
+
+<h2>Способ 2 — по email</h2>
+<p>Подходит, если у вас больше нет доступа к приложению или аккаунту.</p>
+<ol class="steps">
+  <li><strong>Шаг 1.</strong> Напишите на <a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a> с темой письма «Удалить аккаунт».</li>
+  <li><strong>Шаг 2.</strong> Укажите email, под которым зарегистрирован аккаунт в LOSE5 — по нему мы найдём и подтвердим, что запрос от вас.</li>
+  <li><strong>Шаг 3.</strong> Мы удалим аккаунт и данные не позднее чем через 7 рабочих дней и ответим на письмо, когда это будет сделано.</li>
+</ol>
+
+<h2>Какие данные удаляются</h2>
+<div class="table">
+  <div class="row head">
+    <div class="cell">Данные</div>
+    <div class="cell">Что происходит</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Аккаунт и вход (email, идентификатор)</div>
+    <div class="cell" data-label="Что происходит">Удаляется безвозвратно</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Профиль (вес, рост, возраст, пол, цель)</div>
+    <div class="cell" data-label="Что происходит">Удаляется безвозвратно</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">История веса, дневные записи, питание, тренировки</div>
+    <div class="cell" data-label="Что происходит">Удаляется безвозвратно</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Дневные итоги из Apple Health / Health Connect, сохранённые в аккаунте</div>
+    <div class="cell" data-label="Что происходит">Удаляется безвозвратно вместе с записями дня</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Статус подписки в RevenueCat</div>
+    <div class="cell" data-label="Что происходит">Отвязывается от аккаунта; историю платежей отдельно хранят Apple/Google по своим правилам</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Данные">Фото еды, отправленные в Anthropic для распознавания</div>
+    <div class="cell" data-label="Что происходит">У нас не хранятся вовсе; в Anthropic удаляются не позднее чем через 30 дней после отправки, независимо от удаления аккаунта</div>
+  </div>
+</div>
+
+<h2>Что сохраняется и почему</h2>
+<p>Обезличенные события аналитики (какие функции использовались, без email, имени или другого идентификатора) сохраняются — технически их нельзя связать обратно с вами. Они нужны, чтобы понимать, какие функции приложения полезны.</p>
+<p>Данные о подписках и платежах, которые хранят Apple и Google, регулируются политиками этих платформ — удаление аккаунта LOSE5 их не затрагивает и не удаляет.</p>
+
+<div class="alert">
+  <p><strong>Удаление аккаунта не отменяет активную подписку.</strong> Если у вас оформлена LOSE5 PRO, отмените её отдельно в настройках вашего аккаунта App Store или Google Play — иначе списания продолжатся, даже если данные в LOSE5 уже удалены.</p>
+</div>
+
+<h2>Подробнее о данных</h2>
+<p>Полный список того, какие данные мы собираем и как их обрабатываем в целом (не только при удалении), — в <a href="./">Политике конфиденциальности</a>.</p>
+
+<h2>Контакты</h2>
+<div class="contact">
+  <dl>
+    <dt>Email</dt><dd><a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a></dd>
+    <dt>Приложение</dt><dd>LOSE5</dd>
+    <dt>Страна</dt><dd>Республика Казахстан</dd>
+  </dl>
+</div>
+
+</main>
+
+<!-- ============ EN ============ -->
+<main data-lang="en">
+
+<h1>Delete Account</h1>
+<div class="updated">Updated 17 August 2026</div>
+
+<p class="lead">LOSE5 is developed and provided by an individual based in the Republic of Kazakhstan. Below is how to delete your LOSE5 account and its data — inside the app, or by email if you no longer have access to the app. It also lists what data is deleted and what is kept, and why.</p>
+
+<h2>Option 1 — inside the app</h2>
+<ol class="steps">
+  <li><strong>Step 1.</strong> Open LOSE5 and sign in to your account, if you aren't already.</li>
+  <li><strong>Step 2.</strong> Go to the "Profile" tab.</li>
+  <li><strong>Step 3.</strong> Scroll down and tap "Delete account".</li>
+  <li><strong>Step 4.</strong> Confirm the deletion in the pop-up dialog.</li>
+</ol>
+<div class="note">
+  <p><strong>Deletion happens immediately and cannot be undone.</strong> Once confirmed, your account and data cannot be recovered.</p>
+</div>
+
+<h2>Option 2 — by email</h2>
+<p>Use this if you no longer have access to the app or your account.</p>
+<ol class="steps">
+  <li><strong>Step 1.</strong> Email <a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a> with the subject "Delete account".</li>
+  <li><strong>Step 2.</strong> Include the email address your LOSE5 account is registered with — we use it to find and confirm the request is yours.</li>
+  <li><strong>Step 3.</strong> We delete the account and its data within 7 business days and reply once it's done.</li>
+</ol>
+
+<h2>What data is deleted</h2>
+<div class="table">
+  <div class="row head">
+    <div class="cell">Data</div>
+    <div class="cell">What happens</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Account and sign-in (email, account ID)</div>
+    <div class="cell" data-label="What happens">Permanently deleted</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Profile (weight, height, age, sex, goal)</div>
+    <div class="cell" data-label="What happens">Permanently deleted</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Weight history, daily entries, meals, workouts</div>
+    <div class="cell" data-label="What happens">Permanently deleted</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Daily totals from Apple Health / Health Connect saved to your account</div>
+    <div class="cell" data-label="What happens">Permanently deleted along with the daily entries</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Subscription status in RevenueCat</div>
+    <div class="cell" data-label="What happens">Unlinked from the account; payment history is kept separately by Apple/Google under their own policies</div>
+  </div>
+  <div class="row">
+    <div class="cell" data-label="Data">Food photos sent to Anthropic for recognition</div>
+    <div class="cell" data-label="What happens">Never stored by us; deleted by Anthropic within 30 days of being sent, regardless of account deletion</div>
+  </div>
+</div>
+
+<h2>What is kept, and why</h2>
+<p>Anonymised analytics events (which features were used, with no email, name or other identifier) are kept — they cannot be technically linked back to you. They help us understand which features are useful.</p>
+<p>Subscription and payment records held by Apple and Google are governed by those platforms' own policies — deleting your LOSE5 account does not affect or delete them.</p>
+
+<div class="alert">
+  <p><strong>Deleting your account does not cancel an active subscription.</strong> If you have LOSE5 PRO, cancel it separately in your App Store or Google Play account settings — otherwise charges will continue even after your LOSE5 data is deleted.</p>
+</div>
+
+<h2>More about your data</h2>
+<p>For the full picture of what we collect and how we handle it in general (not just on deletion), see our <a href="./">Privacy Policy</a>.</p>
+
+<h2>Contact</h2>
+<div class="contact">
+  <dl>
+    <dt>Email</dt><dd><a href="mailto:lose5.support@gmail.com">lose5.support@gmail.com</a></dd>
+    <dt>App</dt><dd>LOSE5</dd>
+    <dt>Country</dt><dd>Republic of Kazakhstan</dd>
+  </dl>
+</div>
+
+</main>
+
+<footer>
+  <span>
+    <span data-lang="ru" class="on">LOSE5 · Сбрось 5 кг. По одному дню за раз.</span>
+    <span data-lang="en">LOSE5 · Lose 5 kg. One day at a time.</span>
+  </span>
+  <span class="links">
+    <a href="./"><span data-lang="ru" class="on">Политика конфиденциальности</span><span data-lang="en">Privacy Policy</span></a>
+    <a href="./terms.html"><span data-lang="ru" class="on">Условия использования</span><span data-lang="en">Terms of Use</span></a>
+  </span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.langs button');
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.classList.toggle('on', el.getAttribute('data-lang') === lang);
+    });
+    buttons.forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set === lang));
+    });
+    try { localStorage.setItem('lose5-privacy-lang', lang); } catch(e){}
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.set); });
+  });
+  var saved;
+  try { saved = localStorage.getItem('lose5-privacy-lang'); } catch(e){}
+  var initial = saved || (navigator.language && navigator.language.slice(0,2) === 'ru' ? 'ru' : 'en');
+  setLang(initial);
+})();
+</script>
+
+</body>
+</html>
